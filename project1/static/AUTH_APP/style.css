@@ -1,0 +1,19 @@
+a:hover {
+  background-color: orange;
+}
+
+
+.mynav {
+
+    list-style-type: None;
+    margin:0px;
+    padding:0px;
+    font-size:22px;
+}
+
+li a{
+    padding: 15px 15px 15px;
+    display: block;
+    font-family:cursive;
+}
+

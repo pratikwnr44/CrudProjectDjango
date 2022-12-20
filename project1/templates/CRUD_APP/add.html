@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+    {% block title %}
+    <title>Title</title>
+    {% endblock %}
+
+    {% block content %}
+    <center><h1>ADD ORDER</h1></center>
+    <div class="container jumbotron">
+    <form method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" value="ADD ORDER" class="btn btn-success btn-lg">
+        <input type="reset" value="RESET" class="btn btn-warning btn-lg float-right">
+    </form>
+        </div>
+    {% endblock %}
+

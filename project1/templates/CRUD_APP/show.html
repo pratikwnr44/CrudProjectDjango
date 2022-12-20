@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>show</title>
+{% endblock %}
+
+{% block content %}
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ORDER ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">PRODUCT</th>
+      <th scope="col">DEL.DATE</th>
+      <th scope="col">ADDRESS</th>
+      <th scope="col">PRICE</th>
+      <th scope="col" class="pl-5">ACTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in data %}
+    <tr>
+        <td>{{i.o_id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.product}}</td>
+        <td>{{i.d_Date}}</td>
+        <td>{{i.add}}</td>
+        <td>{{i.price}}</td>
+        <td>
+            <a href="{% url 'update_url' i.id %}"><button class="btn btn-warning">UPDATE</button></a>
+            <a href="{% url 'delete_url' i.id %}"><button class="btn btn-danger">DELETE</button></a>
+        </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
